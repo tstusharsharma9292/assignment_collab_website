@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Collab - Your Academic Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom Tailwind Configuration */
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      'primary-blue': '#1D4ED8', /* Deep Blue */
+                      'secondary-teal': '#0D9488', /* Professional Teal */
+                      'accent-orange': '#F97316', /* Vibrant Orange */
+                      'bg-light': '#F8FAFC', /* Light Gray Background */
+                      'card-bg': '#FCFCFC' /* Slightly off-white for card background */
+                  },
+                  fontFamily: {
+                      sans: ['Inter', 'sans-serif'],
+                  },
+                  boxShadow: {
+                      '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+                  },
+                  keyframes: {
+                      // Keyframes for a subtle pulse
+                      pulse_once: {
+                          '0%': { transform: 'scale(1)', boxShadow: '0 0 0 0 rgba(249, 115, 22, 0.7)' },
+                          '70%': { transform: 'scale(1.05)', boxShadow: '0 0 0 10px rgba(249, 115, 22, 0)' },
+                          '100%': { transform: 'scale(1)' },
+                      }
+                  },
+                  animation: {
+                      'pulse-once': 'pulse_once 1s ease-out 1',
+                  }
+              }
+          }
+      }
+      /* Custom CSS for a decorative line under the header */
+      .header-separator {
+          content: '';
+          display: block;
+          width: 80px;
+          height: 3px;
+          background-color: #F97316; /* Accent Orange */
+          margin: 10px auto 0;
+          border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body class="bg-bg-light font-sans antialiased">
+    <div
+      class="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8"
+    >
+      <div
+        class="w-full max-w-4xl bg-card-bg shadow-2xl rounded-2xl overflow-hidden transform transition-all duration-700 hover:shadow-3xl"
+      >
+        <header
+          class="bg-primary-blue text-black p-6 sm:p-10 text-center relative overflow-hidden"
+        >
+          <h1
+            class="text-4xl sm:text-6xl font-black tracking-tight leading-tight"
+          >
+            Assignment Collab!
+          </h1>
+          <p class="mt-3 text-xl sm:text-2xl font-light opacity-95">
+            Your Assignments, Our Expertise. Delivered on Time.
+          </p>
+          <div class="header-separator"></div>
+        </header>
+
+        <section class="p-6 sm:p-10">
+          <div class="grid md:grid-cols-3 gap-8 text-center">
+            <div
+              class="p-6 bg-white border-b-4 border-secondary-teal text-gray-800 rounded-xl shadow-lg transform hover:scale-[1.03] transition duration-300 group"
+            >
+              <svg
+                class="w-12 h-12 mx-auto mb-4 text-secondary-teal group-hover:text-primary-blue transition duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V9a1 1 0 00-1-1h-1a1 1 0 00-1 1v1m0 0v1a1 1 0 001 1h1a1 1 0 001-1v-1m-1 3v-1m-4 5h8a2 2 0 002-2V7a2 2 0 00-2-2H8a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+              <p class="text-4xl font-extrabold text-gray-900">Only ₹100</p>
+              <p class="text-base font-medium text-gray-600 mt-1">
+                Per assignment. Incredible value!
+              </p>
+            </div>
+
+            <div
+              class="p-6 bg-white border-b-4 border-accent-orange text-gray-800 rounded-xl shadow-lg transform hover:scale-[1.03] transition duration-300 group"
+            >
+              <svg
+                class="w-12 h-12 mx-auto mb-4 text-accent-orange group-hover:text-primary-blue transition duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 002 15c0 4.29 2.378 7.55 5.618 9.04M12 21h7a2 2 0 002-2v-3"
+                ></path>
+              </svg>
+              <p class="text-4xl font-extrabold text-gray-900">
+                Trusted Quality
+              </p>
+              <p class="text-base font-medium text-gray-600 mt-1">
+                Reliable, original, and accurate work.
+              </p>
+            </div>
+
+            <div
+              class="p-6 bg-white border-b-4 border-primary-blue text-gray-800 rounded-xl shadow-lg transform hover:scale-[1.03] transition duration-300 group"
+            >
+              <svg
+                class="w-12 h-12 mx-auto mb-4 text-primary-blue group-hover:text-accent-orange transition duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              <p class="text-4xl font-extrabold text-gray-900">2-Day Notice</p>
+              <p class="text-base font-medium text-gray-600 mt-1">
+                Guaranteed delivery with a small lead time.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="px-6 sm:px-10 py-8 bg-gray-50 border-t border-b border-gray-100"
+        >
+          <h2 class="text-3xl font-bold text-gray-800 mb-4 text-center">
+            Why Choose This Collab?
+          </h2>
+          <ul class="space-y-3 text-gray-700 list-inside max-w-2xl mx-auto">
+            <li class="flex items-start">
+              <svg
+                class="flex-shrink-0 w-6 h-6 text-secondary-teal mr-3 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              <span class="text-lg"
+                >**Peace of Mind:** Focus on your studies while your assignments
+                are handled professionally.</span
+              >
+            </li>
+            <li class="flex items-start">
+              <svg
+                class="flex-shrink-0 w-6 h-6 text-secondary-teal mr-3 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              <span class="text-lg"
+                >**Affordable Excellence:** High-quality work that won't strain
+                your student budget.</span
+              >
+            </li>
+            <li class="flex items-start">
+              <svg
+                class="flex-shrink-0 w-6 h-6 text-secondary-teal mr-3 mt-0.5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              <span class="text-lg"
+                >**Reliable Timing:** Just remember to inform us **2 days
+                ahead**, and consider it done!</span
+              >
+            </li>
+          </ul>
+        </section>
+
+        <section class="p-6 sm:p-10 text-center">
+          <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
+            Ready to Get Started?
+          </h2>
+          <p class="text-xl text-gray-700 mb-10">
+            Send a message today with your assignment details to secure your
+            slot.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-12 mb-10"
+          >
+            <div class="text-center">
+              <div
+                class="inline-flex items-center p-3 rounded-full bg-accent-orange/10 mb-2"
+              >
+                <svg
+                  class="w-6 h-6 text-accent-orange"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26c.26.17.59.26.91.26s.65-.09.91-.26L21 8m-2 10H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2z"
+                  ></path>
+                </svg>
+              </div>
+              <a
+                href="mailto:tstusharshrama9292@gmail.com"
+                class="block text-primary-blue hover:text-secondary-teal font-bold text-lg hover:underline transition duration-300 break-all"
+                >tstusharshrama9292@gmail.com</a
+              >
+            </div>
+
+            <div class="text-center">
+              <div
+                class="inline-flex items-center p-3 rounded-full bg-accent-orange/10 mb-2"
+              >
+                <svg
+                  class="w-6 h-6 text-accent-orange"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M7 10h10M7 14h10M7 18h10"
+                  ></path>
+                </svg>
+              </div>
+              <a
+                href="tel:9971225379"
+                class="block text-primary-blue hover:text-secondary-teal font-bold text-lg hover:underline transition duration-300"
+                >9971225379</a
+              >
+            </div>
+          </div>
+
+          <a
+            href="https://forms.gle/iNUFkEb3qoTQbCaH8"
+            target="_blank"
+            class="inline-block px-12 py-4 text-xl font-bold rounded-full text-black bg-accent-orange shadow-lg hover:bg-primary-blue transition duration-300 transform hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-accent-orange focus:ring-opacity-50 animate-pulse-once"
+          >
+            Submit Your Assignment Request Now! 🚀
+          </a>
+        </section>
+
+        <footer
+          class="bg-gray-800 text-white text-center p-4 text-sm opacity-90"
+        >
+          <p>
+            Remember: Assignments require a minimum of 2 days notice for proper
+            completion.
+          </p>
+          <p class="mt-1 text-xs opacity-70">
+            Assignment Collab - Your trusted academic partner.
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
